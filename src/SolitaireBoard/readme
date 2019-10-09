@@ -1,0 +1,12 @@
+You will be implementing a program to model the game Bulgarian Solitaire. This program will run in the console window and will not have a GUI. This is problem P7.4 from our textbook Big Java: Early Objects, 6th Edition, by Cay Horstmann. Here is his description of the problem (second paragraph is a paraphrase):
+The game starts with 45 cards. (They need not be playing cards. Unmarked index cards work just as well.) Randomly divide them into some number of piles of random size. For example, you might start with piles of size 20, 5, 1, 9, and 10. In each round you take one card from each pile, forming a new pile with these cards. For example, the starting configuration would be transformed into piles of size 19, 4, 8, 9, and 5. The solitaire is over when the piles have size 1, 2, 3, 4, 5, 6, 7, 8, and 9, in some order. (It can be shown that you always end up with such a configuration.)
+In the normal mode of operation your program will produce a random starting configuration and print it. It then keeps applying the solitaire step and printing the results, and stops when the final configuration is reached.
+
+BulgarianSolitaireSimulator.java
+SolitaireBoard.java
+
+four output linux modes:
+java -ea BulgarianSolitaireSimulator -u
+java -ea BulgarianSolitaireSimulator -s
+java -ea BulgarianSolitaireSimulator -u -s
+java -ea BulgarianSolitaireSimulator
