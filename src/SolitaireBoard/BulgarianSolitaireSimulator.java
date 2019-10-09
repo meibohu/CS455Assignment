@@ -20,7 +20,7 @@ public class BulgarianSolitaireSimulator {
 	
 	   // <add code here> 	      	   
 	   //(1)    //-u option	   	   
-	/*    Scanner in = new Scanner(System.in); 
+	/*  Scanner in = new Scanner(System.in); 
 	    System.out.println("Number of total cards is 45.");
 	    System.out.println("You will be entering the initial configuration of the cards (i.e., how many in each pile).");
 	    
@@ -44,14 +44,14 @@ public class BulgarianSolitaireSimulator {
 	    }else {
 	    	function1(deck);
 	    }
-//	    System.out.println("Initial configuration:" + deck.configString());	 	    
-//	    deck.play();
-	   //SolitaireBoard deck = user();   
-	 //  single(deck);
+	 // System.out.println("Initial configuration:" + deck.configString());	 	    
+	 // deck.play();
+	  //SolitaireBoard deck = user();   
+	 // single(deck);
 	    
 	    //(2)   
-	   //   SolitaireBoard deck = new SolitaireBoard();   //a random configuration.
-	     // System.out.println("Initial configuration:" + deck.configString() );	      
+	   //SolitaireBoard deck = new SolitaireBoard();   //a random configuration.
+	   //System.out.println("Initial configuration:" + deck.configString() );	      
 	      //deck.play();
 	      //function1(deck);
 	  //    single(deck);
@@ -94,9 +94,9 @@ public class BulgarianSolitaireSimulator {
 	   }
 	 //don't stop until the game is done.
 	 public static void function1(SolitaireBoard deck) {
-		 System.out.println("Initial configuration:" + deck.configString());	 
+		System.out.println("Initial configuration:" + deck.configString());	 
 		    
-		 deck.play();
+		deck.play();
 	 }
 	 
 	 //Stops between every round of the game. The game only continues when the user hits enter (a.k.a., return).
@@ -132,19 +132,19 @@ public class BulgarianSolitaireSimulator {
 	 }
 	  //judge if input satisfies conditions.
 	 private static boolean inputJudge(ArrayList<Integer> list) {
-		 int sum = 0;
-		 boolean result = true;
-	     for(int s: list) {
-	    	 if(s<=0) {      //non-positive numbers
-	    		  result = false;
-	    		  break;
-	    	 }
-	    	 sum += s;
-	      }   
-	      if(sum!=45) {    //sum is not equal to 45.
-	    	  result = false;
-	      }   
-	      return result;		 
+		      int sum = 0;
+		      boolean result = true;
+		      for(int s: list) {
+			 if(s<=0) {      //non-positive numbers
+				  result = false;
+				  break;
+			 }
+			 sum += s;
+		      }   
+		      if(sum!=45) {    //sum is not equal to 45.
+			  result = false;
+		      }   
+		      return result;		 
 	 }
 }
 
