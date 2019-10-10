@@ -25,7 +25,7 @@ public class BulgarianSolitaireSimulator {
 	    System.out.println("You will be entering the initial configuration of the cards (i.e., how many in each pile).");
 	    
 	    ArrayList<Integer> list = readAndValidateString(in);
-	    while(!inputJudge(list)) {
+	    while(!isValidSolitaireBoard(list)) {
 	    	System.out.println("ERROR: Each pile must have at least one card and the total number of cards must be 45");
 	    	list = readAndValidateString(in);	    //input list 		    
 	    }   
@@ -121,7 +121,7 @@ public class BulgarianSolitaireSimulator {
 		 System.out.println("You will be entering the initial configuration of the cards (i.e., how many in each pile).");
 		    
 		 ArrayList<Integer> list = readAndValidateString(in);
-		 while(!inputJudge(list)) {            
+		 while(!isValidSolitaireBoard(list)) {            
 			 System.out.println("ERROR: Each pile must have at least one card and the total number of cards must be 45");
 		     list = readAndValidateString(in);	    //input list 		    
 		 }   
@@ -131,7 +131,7 @@ public class BulgarianSolitaireSimulator {
 //		    SolitaireBoard deck = new SolitaireBoard(list);
 	 }
 	  //judge if input satisfies conditions.
-	 private static boolean inputJudge(ArrayList<Integer> list) {
+	 private static boolean isValidSolitaireBoard(ArrayList<Integer> list) {
 		      int sum = 0;
 		      boolean result = true;
 		      for(int s: list) {
